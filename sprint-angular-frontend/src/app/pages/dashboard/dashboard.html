@@ -1,159 +1,160 @@
-<header>
-        <nav>
-            <span id="menu-hamb" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
-            <menu id="itens">
-                <img src="img/ford.png" alt="Logo Ford" class="logo-ford">
-                <ul>
-                    <li class="ativo"><a href="#">Home</a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                </ul>
+<main>
+  <header>
 
-                <a href="login.html" aria-label="Logout" class="user-perfil">
-                    <div class="user-perfil-cont">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <g data-name="Layer 2" id="Layer_2">
-                                <path
-                                    d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z">
-                                </path>
-                            </g>
-                        </svg>
-                        <span>Logout</span>
-                    </div>
-                </a>
-                <!-- <div id="logout">
-                <a href="index.html">Sair</a>
-            </div> -->
-            </menu>
-        </nav>
+    <app-menu></app-menu>
 
-        <h1 id="titulo-dash">Dashboard FORD</h1>
+    <nav>
+      <span id="menu-hamb" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+      <menu id="itens">
+        <img src="img/ford.png" alt="Logo Ford" class="logo-ford">
+        <ul>
+          <li class="ativo"><a href="#">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
 
-    </header>
-    <main>
+        <a href="login.html" aria-label="Logout" class="user-perfil">
+          <div class="user-perfil-cont">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g data-name="Layer 2" id="Layer_2">
+                <path
+                  d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z">
+                </path>
+              </g>
+            </svg>
+            <span>Logout</span>
+          </div>
+        </a>
+      </menu>
+    </nav>
 
-        <div class="header-main">
+    <h1 id="titulo-dash">Dashboard FORD</h1>
 
-            <div class="veiculo-box">
-                <label for="veiculo-select">Veículo</label>
-                <select id="veiculo-select">
-                    <option value="ranger">Ranger</option>
-                    <option value="mustang" selected>Mustang</option>
-                    <option value="territory">Territory</option>
-                    <option value="broncoSport">Bronco Sport</option>
-                </select>
-            </div>
+  </header>
 
-            <div class="info-box">
-                <span>Total de Vendas</span>
-                <strong id="vendas">1500</strong>
-                <small>Unid.</small>
-            </div>
+  <div class="header-main">
 
-            <div class="info-box">
-                <span>Conectados</span>
-                <strong id="conectados">500</strong>
-                <small>Unid.</small>
-            </div>
+    <div class="veiculo-box">
+      <label for="veiculo-select">Veículo</label>
+      <select id="veiculo-select">
+        <option value="ranger">Ranger</option>
+        <option value="mustang" selected>Mustang</option>
+        <option value="territory">Territory</option>
+        <option value="broncoSport">Bronco Sport</option>
+      </select>
+    </div>
 
-            <div class="info-box">
-                <span>Update Software</span>
-                <strong id="updates">750</strong>
-                <small>Unid.</small>
-            </div>
+    <div class="info-box">
+      <span>Total de Vendas</span>
+      <strong id="vendas">1500</strong>
+      <small>Unid.</small>
+    </div>
 
-        </div>
+    <div class="info-box">
+      <span>Conectados</span>
+      <strong id="conectados">500</strong>
+      <small>Unid.</small>
+    </div>
 
-        <section class="veiculo-display" aria-live="polite">
-            <img id="veiculo-image" src="img/mustang.png" alt="Ford Mustang">
-        </section>
+    <div class="info-box">
+      <span>Update Software</span>
+      <strong id="updates">750</strong>
+      <small>Unid.</small>
+    </div>
 
-        <div class="container-table-veiculos">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Código - Vin</th>
-                        <th>Odômetro</th>
-                        <th>Nível de Combustível</th>
-                        <th>Status</th>
-                        <th>Lat.</th>
-                        <th>Long.</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="vin">2FMDK3AK2FBB023455</td>
-                        <td id="odometro">50000 Km</td>
-                        <td id="combustivel">90 %</td>
-                        <td id="status">on</td>
-                        <td>-12,2322</td>
-                        <td>-35,2314</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+  </div>
 
-    </main>
+  <section class="veiculo-display" aria-live="polite">
+    <img id="veiculo-image" src="img/mustang.png" alt="Ford Mustang">
+  </section>
 
-    <script>
-        const veiculoData = {
-            ranger: {
-                image: 'img/ranger.png',
-                alt: 'Ford Ranger',
-                sales: '4560',
-                updates: '3050',
-                vin: '2FMPK4K92LBA17483',
-                odometer: '10000 Km',
-                fuel: '25 %',
-                status: 'off'
-            },
-            mustang: {
-                image: 'img/mustang.png',
-                alt: 'Ford Mustang',
-                sales: '1500',
-                updates: '750',
-                vin: '2FMDK3AK2FBB023455',
-                odometer: '50000 Km',
-                fuel: '90 %',
-                status: 'on'
-            },
-            territory: {
-                image: 'img/territory.png',
-                alt: 'Ford Territory',
-                sales: '4560',
-                updates: '3050',
-                vin: '2FMAK4K92LBA17483',
-                odometer: '10000 Km',
-                fuel: '25 %',
-                status: 'off'
-            },
-            broncoSport: {
-                image: 'img/broncoSport.png',
-                alt: 'Ford Bronco Sport',
-                sales: '2450',
-                updates: '1250',
-                vin: '3FMCR9B60MRA12345',
-                odometer: '25000 Km',
-                fuel: '70 %',
-                status: 'on'
-            }
-        };
+  <div class="container-table-veiculos">
+    <table>
+      <thead>
+        <tr>
+          <th>Código - Vin</th>
+          <th>Odômetro</th>
+          <th>Nível de Combustível</th>
+          <th>Status</th>
+          <th>Lat.</th>
+          <th>Long.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="vin">2FMDK3AK2FBB023455</td>
+          <td id="odometro">50000 Km</td>
+          <td id="combustivel">90 %</td>
+          <td id="status">on</td>
+          <td>-12,2322</td>
+          <td>-35,2314</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-        document.getElementById('veiculo-select').addEventListener('change', function () {
-            const vehicle = veiculoData[this.value];
-            document.getElementById('veiculo-image').src = vehicle.image;
-            document.getElementById('veiculo-image').alt = vehicle.alt;
-            document.getElementById('vendas').textContent = vehicle.sales;
-            document.getElementById('updates').textContent = vehicle.updates;
-            document.getElementById('vin').textContent = vehicle.vin;
-            document.getElementById('odometro').textContent = vehicle.odometer;
-            document.getElementById('combustivel').textContent = vehicle.fuel;
-            document.getElementById('status').textContent = vehicle.status;
-        });
+</main>
 
-        function clickMenu() {
+<script>
+  const veiculoData = {
+    ranger: {
+      image: 'img/ranger.png',
+      alt: 'Ford Ranger',
+      sales: '4560',
+      updates: '3050',
+      vin: '2FMPK4K92LBA17483',
+      odometer: '10000 Km',
+      fuel: '25 %',
+      status: 'off'
+    },
+    mustang: {
+      image: 'img/mustang.png',
+      alt: 'Ford Mustang',
+      sales: '1500',
+      updates: '750',
+      vin: '2FMDK3AK2FBB023455',
+      odometer: '50000 Km',
+      fuel: '90 %',
+      status: 'on'
+    },
+    territory: {
+      image: 'img/territory.png',
+      alt: 'Ford Territory',
+      sales: '4560',
+      updates: '3050',
+      vin: '2FMAK4K92LBA17483',
+      odometer: '10000 Km',
+      fuel: '25 %',
+      status: 'off'
+    },
+    broncoSport: {
+      image: 'img/broncoSport.png',
+      alt: 'Ford Bronco Sport',
+      sales: '2450',
+      updates: '1250',
+      vin: '3FMCR9B60MRA12345',
+      odometer: '25000 Km',
+      fuel: '70 %',
+      status: 'on'
+    }
+  };
 
-            const itens = document.getElementById('itens');
-            itens.classList.toggle('aberto');
+  document.getElementById('veiculo-select').addEventListener('change', function () {
+    const vehicle = veiculoData[this.value];
+    document.getElementById('veiculo-image').src = vehicle.image;
+    document.getElementById('veiculo-image').alt = vehicle.alt;
+    document.getElementById('vendas').textContent = vehicle.sales;
+    document.getElementById('updates').textContent = vehicle.updates;
+    document.getElementById('vin').textContent = vehicle.vin;
+    document.getElementById('odometro').textContent = vehicle.odometer;
+    document.getElementById('combustivel').textContent = vehicle.fuel;
+    document.getElementById('status').textContent = vehicle.status;
+  });
 
-        }
-    </script>
+  function clickMenu() {
+
+    const itens = document.getElementById('itens');
+    itens.classList.toggle('aberto');
+
+  }
+
+</script>

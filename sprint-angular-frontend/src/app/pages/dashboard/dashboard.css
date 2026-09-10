@@ -71,11 +71,7 @@ menu.aberto {
   border-radius: 15px;
   cursor: pointer;
   transition: 0.3s ease;
-  background: linear-gradient(
-    to bottom right,
-    #2e8eff 0%,
-    rgba(46, 143, 255, 0.372) 30%
-  );
+  background: linear-gradient(to bottom right, #2e8eff 0%, rgba(46, 143, 255, 0.372) 30%);
   background-color: rgba(46, 143, 255, 0.308);
   display: flex;
   align-items: center;
