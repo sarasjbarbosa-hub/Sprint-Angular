@@ -10,7 +10,7 @@
          <img src="img/ford.png" alt="logo-ford" class="logo">
        </div>
 
-       <form action="/login" method="post">
+       <form (ngSubmit)="aoSubmeter()">
 
          <h2 id="texto-principal-login">Boas-vindas</h2>
 
@@ -19,7 +19,7 @@
              <i class="fa-regular fa-user icone-esquerdo"></i>
              <label for="usuário-login"></label>
              <input type="email" id="usuário" name="usuário" autocomplete="username" placeholder="Insira seu e-mail"
-               required>
+               [(ngModel)]="usuarioData.email" required>
              <i class="fa-solid fa-circle-info icone-direito"></i>
            </div>
          </div>
@@ -29,7 +29,7 @@
              <i class="fa-solid fa-lock icone-esquerdo"></i>
              <label for="senha"></label>
              <input type="password" id="senha" name="senha" autocomplete="current-password"
-               placeholder="Insira sua senha" required>
+               placeholder="Insira sua senha" [(ngModel)]="usuarioData.senha" required>
              <i class="fa-solid fa-circle-info icone-direito"></i>
            </div>
          </div>
