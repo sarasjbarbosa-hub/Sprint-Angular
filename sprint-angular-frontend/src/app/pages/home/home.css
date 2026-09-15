@@ -55,9 +55,11 @@ menu.aberto {
   transition: background 0.2s;
 }
 
-body {
+:host {
+  display: block;
+  background-color: #ffffff;
   background-image: url('/img/ranger.png');
-  background-size: cover;
+  background-size: 70% auto;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100dvh;
